@@ -1,0 +1,446 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+nav{
+    width: 101%;
+    height: 10vh;
+    border: .5px solid black;
+    border-style: outset;
+    border-top:0;
+    border-right: 0;
+    border-left: 0;
+    box-shadow: 0 0 10px rgba(0, 0,0, 0.4   );
+    left: -10px;
+    top:-5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: white;
+}
+.container{
+    padding: 10px 5%;
+}
+nav h3{
+    display: block;
+    font-size: 30px;
+    padding-left: 4rem;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 0px 10px 40px 10px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height:3px;
+    background:#1c4b82;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 15%;
+    font-size: 30px;
+    color:black;
+    align-items: center;
+}
+
+.header-text h1{
+    margin-top: 15px;
+    font-size: 60px;
+}
+.header-text h1 span{
+    color: #1c4b82;
+}
+
+.imgFr{
+    background-image: url("images/linkedin.png");
+    background-position: 50%;    
+    border: 1px solid black;
+    width: 450px;
+    height: 30rem;
+    float: right;
+    margin-right: 20px;
+    margin-top: -350px;
+    -webkit-animation: morph 8s ease-in-out infinite;
+    animation: 8s morph ease-in-out infinite;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    transition: all 1s ease-in-out;
+}
+
+/** about part **/
+
+#about{
+    padding-top: 500px;
+    padding-bottom: 200px;
+    color: #ababab
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-1{
+    flex-basis: 35%;
+}
+
+.about-1 img{
+    width: 100%; 
+    border-radius: 15px;
+    height: auto;
+    display: block;
+}
+
+.about-2{
+    flex-basis: 45%;
+    width: 100%;
+}
+
+.sub-text{
+    font-size: 60px;
+    font-weight: 600;
+    color: black;
+}
+
+.additives{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height:3px;
+    background: #1c4b82;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.additives-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.additives-contents ul li span{
+    color: #1c4b82;
+    font-size: 18px;
+}
+.additives-contents{
+    display: none;
+}
+.additives-contents.active-tab{
+    display: block;
+}
+
+/** Portfoilio **/
+#portfolio {
+    padding-bottom: 200px;
+}
+
+.projectList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 70px;
+}
+
+.proj{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.proj img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0,0, 0.6), #1c4b82);
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    opacity: 0;
+}
+.layer a{
+    margin-top: 20px;
+    color: #1c4b82;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.proj:hover img{
+    transform: scale(1.1);
+}
+.proj:hover .layer{
+
+    transform: translateY(-460px);
+    transition: all .5s;
+    opacity: 1;
+}
+
+.btn{
+    display:block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #1c4b82;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.5s;
+}
+.btn:hover {
+    background: #1c4b82;
+    color: white;
+}
+
+/**Contact**/
+.contact-left{
+    flex-basis: 35%
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p svg{
+    margin-right: 15px;
+    color: #1c4b82;
+    font-size: 20px;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#1c4b82;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #1c4b82;
+    color: white;
+}
+.contact-right form{
+    width: 100%;
+    padding-top: 40px;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(184, 183, 183);
+    padding: 10px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form textarea{
+    height: 185px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+nav .fas{
+    display: none;
+}
+.sub-text{
+    text-align: center;
+}
+
+
+/*----for smaller scales---*/
+@media only screen and (max-width: 740px){
+    nav h3{
+        margin-top: 30px;
+    }
+    nav{
+        left: -10px;
+    }
+    
+    nav ul li a{
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        position: relative;
+    }
+    .header-text{
+        margin-top: 70px;
+        font-size: 20px;
+        text-align: center; 
+        display: inline-flex;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header-text h1{
+        font-size: 35px;
+    }
+    
+    .header-text .imgFr{
+        width: 300px;
+        height: 400px;
+        float: right;
+        margin: 0px 0px;
+    }
+    #about .container{
+        margin-top:  -300px;
+        margin-left: 4rem;
+        padding-bottom: 8rem 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-1 img{
+        width: 320px; 
+        height: 320px;
+        border-radius: 50%;
+        margin: auto 25px;
+    }
+    .about-2{
+        width: 100%;
+        font-weight: 500;
+    }
+    .sub-text{
+        font-size: 40px;
+        text-align: center;     
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 35px;
+        padding-right: 30px;
+    }
+
+    nav ul{
+        position:fixed;
+        background: #1c4b82;
+        top: -15px;
+        right: -300px;
+        width: 150px; 
+        height: 100vh;
+        padding-top: 50px;
+        padding-right: 100px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px -20px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 21px;
+        cursor: pointer;
+    }
+
+    .proj:hover .layer{
+        height: 100%;
+        transform: translateY(-315px);
+        transition:  .5s;
+    }
+
+    .contact-left{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .contact-right{
+        flex-basis: 95%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1088px){
+    .proj:hover .layer{
+        height: 100%;
+        transform: translateY(-362px);
+    }
+}
+
+/**** Morph **/
+@keyframes morph{
+    0%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    
+    50%{
+        border-radius: 30% 60% 70% 40%/ 50% 60% 30% 60%;
+    }
+    
+    100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+
