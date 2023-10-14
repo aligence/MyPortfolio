@@ -118,7 +118,9 @@ nav ul li a:hover::after{
     flex-basis: 45%;
     width: 100%;
 }
-
+.about-2 p, li{
+    color: black;
+}
 .sub-text{
     font-size: 60px;
     font-weight: 600;
