@@ -204,7 +204,7 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 .layer{
-    width: 80%;
+    width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0, 0,0, 0.6), #1c4b82);
     color: white;
@@ -215,7 +215,6 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
@@ -237,8 +236,7 @@ nav ul li a:hover::after{
     transform: scale(1.1);
 }
 .proj:hover .layer{
-
-    transform: translateY(-460px);
+    transform: translateY(-100%);
     transition: all .5s;
     opacity: 1;
 }
@@ -416,11 +414,7 @@ nav .fas{
         cursor: pointer;
     }
 
-    .proj:hover .layer{
-        height: 100%;
-        transform: translateY(-315px);
-        transition:  .5s;
-    }
+    
 
     .contact-left{
         flex-basis: 100%;
@@ -429,13 +423,6 @@ nav .fas{
     .contact-right{
         flex-basis: 95%;
         text-align: center;
-    }
-}
-
-@media only screen and (max-width: 1088px){
-    .proj:hover .layer{
-        height: 100%;
-        transform: translateY(-362px);
     }
 }
 
