@@ -397,11 +397,13 @@ nav .fas{
 .designProj .sml{
     width: 50%;
     height: 100%;
+    margin: auto;
 }
 
 .designProj img{
     width: 100%;
     height: 100%;
+    margin-left: -100px;
 }
 
 .imageGrid{
