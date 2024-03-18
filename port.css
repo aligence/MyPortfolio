@@ -1,7 +1,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    background-image: url("./images/smu.webp");
+    
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -111,7 +111,7 @@ nav ul li a:hover::after{
 /** about part **/
 
 #about{
-    padding-top: 90px;
+    padding: 90px 10px 90px 10px ;
     color: #ababab
 }
 
@@ -274,6 +274,9 @@ nav ul li a:hover::after{
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 41px;
     margin-top: 20px;
+    height: 60vh;
+    width: 60%;
+    margin: auto;
 }
 
 
@@ -441,6 +444,8 @@ nav .fas{
 .head{
     text-align: center;
 }
+
+
 /*----for smaller scales---*/
 @media only screen and (max-width: 740px){
     nav h3{
