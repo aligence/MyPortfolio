@@ -28,8 +28,8 @@ nav{
 
 .container{
     padding: 10px 5%;
-    
 }
+
 nav h3{
     display: block;
     font-size: 30px;
@@ -420,6 +420,27 @@ nav .fas{
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
+#nature.container{
+    height: 10vh;
+    font-size: 20px;
+}
+.personas{
+    width:100%;
+}
+
+.eep{
+    width: 80%;
+    height: 80%;
+}
+
+.reduce{
+    margin:auto;
+    width: 50%;
+}
+
+.head{
+    text-align: center;
+}
 /*----for smaller scales---*/
 @media only screen and (max-width: 740px){
     nav h3{
