@@ -70,7 +70,7 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 20%;
+    margin-top: 30%;
     font-size: 30px;
     color:black;
     align-items: center;
@@ -461,7 +461,11 @@ nav .fas{
 
 
 /*----for smaller scales---*/
-@media only screen and (max-width: 740px){
+@media only screen and (max-width: 840px){
+    #optionBar{
+        padding-bottom: -100px;
+    }
+
     nav h3{
         margin-top: 30px;
     }
@@ -476,12 +480,13 @@ nav .fas{
         position: relative;
     }
     .header-text{
-        margin-top: 100px;
+        margin-top: 130px;
         font-size: 20px;
         text-align: center; 
         display: inline-flex;
         display: flex;
         flex-direction: column;
+        margin-left: 0
     }
     
     .header-text h1{
@@ -502,6 +507,31 @@ nav .fas{
         justify-content: center;
     }
 
+
+    .row{
+        justify-content:center;
+        
+    }
+    .about-1{
+        
+        margin-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .carousel-inner{
+        width: 320px; 
+        height: 320px;
+        
+    }
+
+    #carouselExampleInterval{
+        width: 320px; 
+        height: 320px;
+        border-radius: 50%;
+        margin: auto 25px;
+        
+    }
+
+
     .about-1 img{
         width: 320px; 
         height: 320px;
@@ -512,9 +542,18 @@ nav .fas{
         width: 100%;
         font-weight: 500;
     }
+
     .sub-text{
-        font-size: 40px;
+        font-size: 70px;
         text-align: center;     
+    }
+    .about-2 p{
+        font-size: 25px;
+    }
+
+
+    #portfolio{
+        margin: auto;
     }
 
     nav .fas{
